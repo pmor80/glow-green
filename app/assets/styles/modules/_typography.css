@@ -1,0 +1,17 @@
+h1 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.heading {
+  color: red;
+  &--centered {
+    text-align: center;
+  }
+}

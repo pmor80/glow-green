@@ -1,0 +1,103 @@
+#products {
+  padding: 3% 0;
+  background: rgb(232, 113, 34);
+  background: linear-gradient(
+    0deg,
+    rgba(232, 113, 34, 1) 62%,
+    rgba(80, 36, 6, 1) 100%
+  );
+  .wrapper {
+    @mixin atMedium {
+      display: flex;
+    }
+    .product {
+      display: block;
+      border: 1px solid #ececec;
+      padding-bottom: 20px;
+      transition: all 0.2s ease-in-out;
+      background-color: #fff;
+
+      @mixin atMedium {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &:first-child {
+        @mixin atMedium {
+          border-right: 1px solid transparent;
+          border-top-left-radius: 7px;
+          border-bottom-left-radius: 7px;
+        }
+      }
+
+      &:last-child {
+        @mixin atMedium {
+          border-left: 1px solid transparent;
+          border-top-right-radius: 7px;
+          border-bottom-right-radius: 7px;
+        }
+      }
+
+      &:hover {
+        background-color: $lightGrey;
+        cursor: pointer;
+      }
+
+      & > div {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @mixin atMedium {
+        flex: 1;
+      }
+
+      &__promo {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #301604;
+        background-color: #e7e7e7;
+        letter-spacing: 0.5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      &__name {
+        text-align: center;
+        line-height: 1.5;
+        h3 {
+          min-height: 60px;
+          font-weight: 300;
+        }
+        @mixin atMedium {
+          flex: 1;
+        }
+      }
+
+      &__manufacturer {
+        padding: 10px 0 0 0;
+        text-align: center;
+        font-weight: 300;
+      }
+
+      &__price {
+        padding: 20px 0;
+        font-size: 3rem;
+        font-weight: 100;
+        text-align: center;
+        @mixin atMedium {
+          font-size: 4rem;
+        }
+      }
+
+      &__image {
+        text-align: center;
+      }
+
+      &__btn {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
